@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "SatoshiBold";
+    src: local("Satoshi"),
+    url("../../assets/Satoshi-Black.otf") format("truetype");
+    font-weight: bold;
+}
+/*Header section*/
+.Product {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    display: flex;
+    justify-items: end;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-right: 15px;
+}
+
+.profilePicture {
+    width: 40px;
+    height: 40px;
+    background-color:#001EB9;
+    border-radius: 50px;
+}
+
+.profileName{
+    color: black;
+    font-weight: 650;
+    font-family: Arial, serif;
+    font-size: 12px;
+    padding-right: 10px;
+}
+
+.iconDown{
+    width: 11px;
+    padding-right: 5px;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+/*Product section*/
+.main{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.productName{
+    font-size: 18px;
+    letter-spacing: 4px;
+    font-weight: 900;
+    font-family: "SatoshiBold", serif;
+}
