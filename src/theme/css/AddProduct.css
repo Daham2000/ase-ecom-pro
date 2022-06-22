@@ -59,8 +59,9 @@
 .addProInput {
     background-color: #F7F7F7;
     border: none;
-    height: 25px;
+    height: 20px;
     outline: none;
+    padding: 10px;
     width: 400px;
 }
 
@@ -78,6 +79,7 @@
 .inputDec {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .descriptionSection {
@@ -101,6 +103,7 @@
     width: 100%;
     margin-top: 10px;
     text-align: start;
+    padding: 10px;
 }
 
 .imagesSection {

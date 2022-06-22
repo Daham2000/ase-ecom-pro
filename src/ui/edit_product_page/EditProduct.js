@@ -11,7 +11,7 @@ function EditProduct() {
                 <div className="addProRow">
                     <text className="productName">PRODUCTS</text>
                     <img id="imageRightAddPro" src={require("../../assets/arrow_right.png")}/>
-                    <text className="addProductText">Add new product</text>
+                    <text className="addProductText">Edit product</text>
                 </div>
                 <div id="formSectionAddProduct">
                     <div className="fieldInputRow">
@@ -53,13 +53,14 @@ function EditProduct() {
                             <text className="inputFieldName">Product Images</text>
                             <text id="productDesTopic">JPEG, PNG, SVG or GIF (Maximum file size 50MB)</text>
                         </div>
-                        <List style={{ display: 'flex', flexDirection: 'row', padding: 0 }}>
-                            <img className="imageAddProduct" src={"https://img.freepik.com/free-psd/cosmetic-product-packaging-mockup_1150-40284.jpg?w=2000"}/>
+                        <List style={{display: 'flex', flexDirection: 'row', padding: 0}}>
+                            <img className="imageAddProduct"
+                                 src={"https://img.freepik.com/free-psd/cosmetic-product-packaging-mockup_1150-40284.jpg?w=2000"}/>
                         </List>
-                        <text id="addImagesText">Add Images</text>
+                        <text id="addImagesText">Edit Images</text>
                     </div>
                     <div className="addProBtn">
-                        <button className="newProduct">Add Product</button>
+                        <button className="newProduct">Save changes</button>
                     </div>
                 </div>
             </div>
