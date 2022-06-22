@@ -1,29 +1,30 @@
 import './theme/css/Product.css';
 import ProfileBarApp from "./components/ProfileBarApp";
-import {useState} from "react";
-
-const searchAction = () => console.log('hi');
+import {List} from "@material-ui/core";
+import ProductSearch from "./components/productSearch";
+import SingleProduct from "./components/SingleProduct";
 
 function Product() {
-    const [searchQuery, setQuery] = useState(''); // '' is the initial state value
-
+    const data = "Hello Everyone";
     return (
         <div className="Product">
             <ProfileBarApp/>
             <div className="main">
                 <text className="productName">PRODUCTS</text>
-                <div className="productSearch">
-                    <div className="productSearchBar">
-                        <input value={searchQuery} className="textFieldSearch" type="text" disableUnderline={true}
-                               variant="standard"
-                               onInput={e => setQuery(e.target.value)}
-                               placeholder="Search for products"
-                               fullWidth/>
-                        <div className="button" onClick={searchAction} aria-hidden="true">
-                            <img alt="" src={require('../src/assets/search.png')} className="iconSearch"/>
-                            <text className="searchText">Search</text>
-                        </div>
+                <ProductSearch/>
+                <div className="productsSection">
+                    <div className="tableNameList">
+                        <text className="tableName">SKU</text>
+                        <text className="tableName">IMAGE</text>
+                        <text className="tableName">PRODUCT NAME</text>
+                        <text className="tableName">PRICE</text>
+                        <div className="endTable"></div>
                     </div>
+                    <List style={{maxHeight: '100%', overflow: 'auto'}}>
+                        <SingleProduct data={data}/>
+                        <SingleProduct data={data}/>
+                        <SingleProduct data={data}/>
+                    </List>
                 </div>
             </div>
         </div>

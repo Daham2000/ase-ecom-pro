@@ -1,6 +1,6 @@
 @font-face {
     font-family: "SatoshiBold";
-    src: local("Satoshi"),
+    src: local("SatoshiBold"),
     url("../../assets/Satoshi-Black.otf") format("truetype");
     font-weight: bold;
 }
@@ -11,6 +11,7 @@
     url("../../assets/Satoshi-Variable.ttf") format("truetype");
     font-weight: bold;
 }
+
 /*Header section*/
 .Product {
     display: flex;
@@ -31,11 +32,11 @@
 .profilePicture {
     width: 40px;
     height: 40px;
-    background-color:#001EB9;
+    background-color: #001EB9;
     border-radius: 50px;
 }
 
-.profileName{
+.profileName {
     color: black;
     font-weight: 650;
     font-family: Arial, serif;
@@ -43,7 +44,7 @@
     padding-right: 10px;
 }
 
-.iconDown{
+.iconDown {
     width: 11px;
     padding-right: 5px;
     margin-top: 15px;
@@ -51,13 +52,13 @@
 }
 
 /*Product section*/
-.main{
+.main {
     display: flex;
     flex-direction: column;
     padding: 15px;
 }
 
-.productName{
+.productName {
     font-size: 18px;
     letter-spacing: 4px;
     font-weight: 900;
@@ -65,14 +66,14 @@
     padding-bottom: 10px;
 }
 
-.productSearch{
+.productSearch {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content: space-between;
 }
 
-.productSearchBar{
+.productSearchBar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -87,7 +88,7 @@
     height: 35px;
 }
 
-.button{
+.button {
     background-color: #001EB9;
     width: 100px;
     font-size: 12px;
@@ -104,16 +105,17 @@
     margin-right: 12px;
 }
 
-.searchText{
+.searchText {
     color: white;
     font-family: "Satoshi", serif;
 }
 
-.iconSearch{
+.iconSearch {
     width: 11px;
     padding-right: 5px;
 }
-.textFieldSearch{
+
+.textFieldSearch {
     border: none;
     background-color: transparent;
     width: 40%;
@@ -123,4 +125,105 @@
     border-left-style: hidden;
     border-bottom-style: hidden;
     outline: none;
+}
+
+.productRowRight {
+    display: flex;
+    flex-direction: row;
+}
+
+.newProduct {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #001EB9;
+    height: 29px;
+    width: 120px;
+    color: white;
+    font-family: "Satoshi", serif;
+    font-size: 10px;
+    border: none;
+    margin-right: 5px;
+}
+
+.favouriteBtn{
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 25px;
+    width: 32px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.singlePro{
+    display: flex;
+    flex-direction: column;
+}
+
+.productsSection{
+    margin-top: 35px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tableNameList{
+    display: flex;
+    flex-direction: row;
+}
+
+.tableName{
+    width: 300px;
+    color: #001EB9;
+    font-size: 12px;
+    font-family: "Satoshi", serif;
+    font-weight: 500;
+}
+
+.endTable{
+    width: 120px;
+}
+
+.productLine{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-items: center;
+}
+
+.productId{
+    width: 300px;
+    font-size: 12px;
+    font-family: "Satoshi", serif;
+    font-weight: 500;
+}
+
+.productImage {
+    width: 60px;
+    height: 45px;
+}
+
+.imageSection{
+    width: 300px;
+}
+
+.proEndTool{
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+}
+
+.toolPro{
+    width: 15px;
+    height: 15px;
+    padding-right: 13px;
 }
