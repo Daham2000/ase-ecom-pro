@@ -4,6 +4,13 @@
     url("../../assets/Satoshi-Black.otf") format("truetype");
     font-weight: bold;
 }
+
+@font-face {
+    font-family: "Satoshi";
+    src: local("Satoshi"),
+    url("../../assets/Satoshi-Variable.ttf") format("truetype");
+    font-weight: bold;
+}
 /*Header section*/
 .Product {
     display: flex;
@@ -55,4 +62,65 @@
     letter-spacing: 4px;
     font-weight: 900;
     font-family: "SatoshiBold", serif;
+    padding-bottom: 10px;
+}
+
+.productSearch{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.productSearchBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: #F7F7F7;
+    width: 40%;
+    height: 35px;
+}
+
+.button{
+    background-color: #001EB9;
+    width: 100px;
+    font-size: 12px;
+    height: 25px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.searchText{
+    color: white;
+    font-family: "Satoshi", serif;
+}
+
+.iconSearch{
+    width: 11px;
+    padding-right: 5px;
+}
+.textFieldSearch{
+    border: none;
+    background-color: transparent;
+    width: 40%;
+    margin-left: 15px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    outline: none;
 }
