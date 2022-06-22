@@ -5,7 +5,6 @@ import SearchProduct from "./components/SearchProduct";
 import {List} from "@material-ui/core";
 
 function Product() {
-    const data = "Hello Everyone";
     return (
         <div className="Product">
             <ProfileBarApp/>

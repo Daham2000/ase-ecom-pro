@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './theme/css/index.css';
-import Product from './Product';
 import reportWebVitals from './reportWebVitals';
+import AddProduct from "./ui/app_product/AddProduct";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Product />
+    <AddProduct />
   </React.StrictMode>
 );
 

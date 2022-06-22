@@ -1,0 +1,81 @@
+@font-face {
+    font-family: "SatoshiBold";
+    src: local("SatoshiBold"),
+    url("../../assets/Satoshi-Black.otf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: local("Satoshi"),
+    url("../../assets/Satoshi-Variable.ttf") format("truetype");
+}
+
+.mainSection {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.addProRow {
+    display: flex;
+    flex-direction: row;
+}
+
+#imageRightAddPro {
+    width: 12px;
+    height: 14px;
+    margin-top: 4px;
+}
+
+.addProductText {
+    color: #001EB9;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: Satoshi, serif;
+    margin-left: 13px;
+    letter-spacing: 2px;
+    margin-top: 2px;
+}
+
+#formSectionAddProduct {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputFieldName{
+    margin-right: 15px;
+    font-family: 'Satoshi', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 26px;
+    width: 150px;
+}
+
+.addProInput{
+    background-color: #F7F7F7;
+    border: none;
+    height: 25px;
+    outline: none;
+    width: 400px;
+}
+
+.fieldInputRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.baseAddProName{
+    width: 50px;
+}
+
+.inputDec{
+    display: flex;
+    flex-direction: row;
+}
