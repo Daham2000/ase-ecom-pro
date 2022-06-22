@@ -15,8 +15,8 @@
     display: flex;
     flex-direction: column;
     padding: 15px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .addProRow {
@@ -46,7 +46,7 @@
     flex-direction: column;
 }
 
-.inputFieldName{
+.inputFieldName {
     margin-right: 15px;
     font-family: 'Satoshi', serif;
     font-style: normal;
@@ -56,7 +56,7 @@
     width: 150px;
 }
 
-.addProInput{
+.addProInput {
     background-color: #F7F7F7;
     border: none;
     height: 25px;
@@ -64,18 +64,77 @@
     width: 400px;
 }
 
-.fieldInputRow{
+.fieldInputRow {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
-.baseAddProName{
+.baseAddProName {
     width: 50px;
 }
 
-.inputDec{
+.inputDec {
     display: flex;
     flex-direction: row;
+}
+
+.descriptionSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#productDesTopic {
+    font-family: 'Satoshi', serif;
+    font-weight: 400;
+    font-size: 11px;
+    color: #162427;
+}
+
+#addProDesInput {
+    background-color: #F7F7F7;
+    border: none;
+    height: 55px;
+    outline: none;
+    width: 100%;
+    margin-top: 10px;
+    text-align: start;
+}
+
+.imagesSection {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+#imagesNameSec {
+    display: flex;
+    flex-direction: column;
+    width: 125px;
+}
+
+#addImagesText {
+    font-size: 13px;
+    color: #001EB9;
+    font-weight: 600;
+    font-family: 'Satoshi', serif;
+    margin-left: 40px;
+    margin-top: 5px;
+    text-decoration-line: underline;
+    letter-spacing: 0.3px;
+}
+
+.imageAddProduct {
+    width: 80px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.addProBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-top: 30px;
 }

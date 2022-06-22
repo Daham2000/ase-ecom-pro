@@ -1,7 +1,7 @@
-import './theme/css/Product.css';
-import ProfileBarApp from "./components/ProfileBarApp";
-import ProductSearch from "./components/productSearch";
-import SearchProduct from "./components/SearchProduct";
+import '../../theme/css/Product.css';
+import ProfileBarApp from "../../components/ProfileBarApp";
+import ProductSearch from "../../components/productSearch";
+import SearchProduct from "../../components/SearchProduct";
 import {List} from "@material-ui/core";
 
 function Product() {
