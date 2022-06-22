@@ -9,7 +9,6 @@
     font-family: "Satoshi";
     src: local("Satoshi"),
     url("../../assets/Satoshi-Variable.ttf") format("truetype");
-    font-weight: bold;
 }
 
 /*Header section*/
@@ -147,7 +146,7 @@
     margin-right: 5px;
 }
 
-.favouriteBtn{
+.favouriteBtn {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -161,12 +160,12 @@
     justify-content: center;
 }
 
-.singlePro{
+.singlePro {
     display: flex;
     flex-direction: column;
 }
 
-.productsSection{
+.productsSection {
     margin-top: 35px;
     margin-left: 30px;
     margin-right: 30px;
@@ -174,12 +173,12 @@
     flex-direction: column;
 }
 
-.tableNameList{
+.tableNameList {
     display: flex;
     flex-direction: row;
 }
 
-.tableName{
+.tableName {
     width: 300px;
     color: #001EB9;
     font-size: 12px;
@@ -187,11 +186,11 @@
     font-weight: 500;
 }
 
-.endTable{
+.endTable {
     width: 120px;
 }
 
-.productLine{
+.productLine {
     display: flex;
     flex-direction: row;
     margin-top: 15px;
@@ -200,7 +199,7 @@
     justify-items: center;
 }
 
-.productId{
+.productId {
     width: 300px;
     font-size: 12px;
     font-family: "Satoshi", serif;
@@ -212,18 +211,83 @@
     height: 45px;
 }
 
-.imageSection{
+.imageSection {
     width: 300px;
 }
 
-.proEndTool{
+.proEndTool {
     width: 120px;
     display: flex;
     flex-direction: row;
 }
 
-.toolPro{
+.toolPro {
     width: 15px;
     height: 15px;
     padding-right: 13px;
+}
+
+.searchResult{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.searchCountText{
+    color: gray;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    font-family: "Satoshi", serif;
+    letter-spacing: 2px;
+}
+
+.productSearchSingle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 22px;
+    margin-bottom: 10px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.proIdSearch{
+    font-size: 12px;
+    color: #001EB9;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.proNameSearch{
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.proDesSearch{
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #162427;
+}
+
+.proDetailsSearch{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productRowSingle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#imageRight{
+    width: 12px;
+    height: 16px;
 }

@@ -20,7 +20,7 @@ function SingleProduct(props) {
                     </div>
                 </div>
             </div>
-            <div style={{ borderTop: "1px solid #969191"}}></div>
+            <div style={{borderTop: "1px solid #969191"}}></div>
         </div>
     );
 }
