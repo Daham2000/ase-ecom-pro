@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './theme/css/index.css';
 import reportWebVitals from './reportWebVitals';
-import Product from "./ui/all_product_page/Product";
 import configStore from "./store/configStore"
 import { Provider } from 'react-redux';
+import App from './App';
 
 const store = configStore();
 
@@ -12,8 +12,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <Provider store={store}>
-            <Product/>
+            <App />
         </Provider>
-    </React.StrictMode>
+    </React.StrictMode>,
 );
+
 reportWebVitals();
