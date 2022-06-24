@@ -1,0 +1,4 @@
+export const GETALL = 'GETALL';
+export const POSTPRODUCT = 'POSTPRODUCT';
+export const EDITPRODUCT = 'EDITPRODUCT';
+export const DELETEPRODUCT = 'DELETEPRODUCT';
