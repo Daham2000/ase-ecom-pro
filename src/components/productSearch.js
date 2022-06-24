@@ -1,10 +1,11 @@
 import {useState} from "react";
 import '../theme/css/Product.css';
-
-const searchAction = () => console.log('hi');
+import { useSelector } from 'react-redux';
 
 function ProductSearch() {
     const [searchQuery, setQuery] = useState(''); // '' is the initial state value
+    const { isLoading, products, errorMessage } = useSelector(state => state.products)
+    const searchAction = () => console.log(searchQuery);
 
     return (
         <div className="productSearch">

@@ -7,7 +7,6 @@ export const loadProducts = () => (dispatch) => {
 	ProductService.getAllUsers()
 		.then((response) => {
 			dispatch(actions.productLoadSuccess(response.data))
-			console.log("SSS: " + response.data[0].images)
 		})
 		.catch((error) => dispatch(actions.productLoadError(error.message)));
 };
