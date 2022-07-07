@@ -1,14 +1,16 @@
 import { useState } from "react";
 import '../theme/css/Product.css';
-import { useSelector } from 'react-redux';
+import { useSelector,useDispatch } from 'react-redux';
 import Strings from "../utill/Strings";
 import { Link } from "react-router-dom";
+import { loadSearchProducts } from "../reducers/products/productThunks"
 
 //Product search bar component
 function ProductSearch() {
+    const dispatch = useDispatch();
     const [searchQuery, setQuery] = useState(''); // '' is the initial state value
-    // const { isLoading, products, errorMessage } = useSelector(state => state.products)
-    const searchAction = () => console.log(searchQuery);
+    const {products } = useSelector(state => state.products)
+    const searchAction = () => dispatch(loadSearchProducts(searchQuery));
 
     return (
         <div className="productSearch">
