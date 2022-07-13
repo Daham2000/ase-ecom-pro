@@ -35,3 +35,18 @@ export const addProducts = (data) => (dispatch) => {
 		})
 		.catch((error) => dispatch(actions.addProductError(error.message)));
 };
+
+//Edit product middleware fuction
+export const setSingleProduct = (data) => (dispatch) => {
+	dispatch(actions.productEditStart(data));
+};
+
+//Edit product middleware fuction
+export const editProducts = (data) => (dispatch) => {
+	dispatch(actions.productEditStartNext());
+	ProductService.editProduct(data)
+		.then((response) => {
+			dispatch(actions.productEditSuccess(response.data))
+		})
+		.catch((error) => dispatch(actions.productEditError(error.message)));
+};

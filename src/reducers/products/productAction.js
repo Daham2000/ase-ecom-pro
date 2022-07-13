@@ -44,6 +44,25 @@ const productSearchLoadError = (error) => ({
     payload: error
 });
 
+//edit product actions
+const productEditStart = (product) => ({
+    type: actionType.PRODUCT_EDIT_START,
+    payload: product
+});
+
+const productEditStartNext = () => ({
+    type: actionType.PRODUCT_EDIT_START_NEXT
+});
+
+const productEditSuccess = (products) => ({
+    type: actionType.PRODUCT_EDIT_SUCCESS,
+    payload: products
+});
+
+const productEditError = (error) => ({
+    type: actionType.PRODUCT_EDIT_ERROR,
+    payload: error
+});
 
 export default {
     appProduct,
@@ -54,5 +73,9 @@ export default {
     productLoadError,
     productSearchStartLoad,
     productSearchLoadSuccess,
-    productSearchLoadError
+    productSearchLoadError,
+    productEditError,
+    productEditSuccess,
+    productEditStartNext,
+    productEditStart
 }

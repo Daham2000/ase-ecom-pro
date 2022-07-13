@@ -68,6 +68,33 @@ const productReducer = (state = productState, { type, payload }) => {
                 isSearching: false,
                 errorMessage: payload
             }
+
+        //edit product actions
+        case actions.PRODUCT_EDIT_START:
+            return {
+                ...state,
+                isLoading: false,
+                product: payload,
+                errorMessage: null
+            }
+        case actions.PRODUCT_EDIT_START_NEXT:
+            return {
+                ...state,
+                isLoading: true,
+                errorMessage: null
+            }
+        case actions.PRODUCT_EDIT_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                products: payload
+            }
+        case actions.PRODUCT_EDIT_ERROR:
+            return {
+                ...state,
+                isLoading: false,
+                errorMessage: payload
+            }
         default:
             return state
     }

@@ -1,9 +1,17 @@
 import '../theme/css/Product.css';
 import Strings from '../utill/Strings';
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect } from "react";
+import { setSingleProduct } from "../reducers/products/productThunks"
 
 // Single product component
 function SingleProduct(props) {
+
+    const dispatch = useDispatch();
+
+    const saveProduct = () => dispatch(setSingleProduct(props.props));
+
     return (
         <div className="singlePro">
             <div className="productLine">
@@ -18,7 +26,7 @@ function SingleProduct(props) {
                 <div className="proEndTool">
                     <div>
                         <img className='toolPro' alt="" src={require("../assets/delete.png")} />
-                        <Link to={Strings.EDIT_PRODUCT}>
+                        <Link to={Strings.EDIT_PRODUCT} onClick={saveProduct}>
                             <img className='toolPro' alt="" src={require("../assets/edit.png")} />
                         </Link>
                         <img className='toolPro' alt="" src={require("../assets/fav.png")} />

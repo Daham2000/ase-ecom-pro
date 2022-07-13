@@ -1,9 +1,9 @@
 import '../theme/css/Product.css';
-import { useSelector} from 'react-redux';
+import { useSelector } from 'react-redux';
 
 
 function SearchProduct(props) {
-    const {products} = useSelector(state => state.products)
+    const { products } = useSelector(state => state.products)
 
     return (
         <div className="productSearchSingle">
@@ -14,9 +14,9 @@ function SearchProduct(props) {
                     <text className="proDesSearch">{props.props.description}
                     </text>
                 </div>
-                <img id="imageRight" src={require("../assets/arrow_right.png")}/>
+                <img id="imageRight" src={require("../assets/arrow_right.png")} />
             </div>
-            <div style={{borderTop: "1px solid #969191"}}/>
+            <div style={{ borderTop: "1px solid #969191" }} />
         </div>
     );
 }

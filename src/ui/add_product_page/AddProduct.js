@@ -45,7 +45,6 @@ function AddProduct() {
         return () => errorMessage
     }, [isAdded]);
 
-
     return (
         <div className="Product">
             <ProfileBarApp />

@@ -25,7 +25,7 @@ function Product() {
                 <ProductSearch />
                 {/* search product view */}
                 {isSearching && <div className="searchResult">
-                    <text className="searchCountText">{products!==null ? products.length : 0} results found for ‘Books’</text>
+                    <text className="searchCountText">{products !== null ? products.length : 0} results found for ‘Books’</text>
                     {products && products.map((pro) => <SearchProduct props={pro} />)}
                 </div>
                 }
