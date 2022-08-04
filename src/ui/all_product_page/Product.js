@@ -11,10 +11,10 @@ import Loader from "react-js-loader";
 function Product() {
     const dispatch = useDispatch();
 
-    const { isLoading, products, errorMessage } = useSelector(state => state.products)
+    const { isLoading, products, errorMessage, isSearching } = useSelector(state => state.products)
 
     useEffect(() => {
-        dispatch(loadProducts());
+        dispatch(loadProducts(""));
     }, []);
 
     return (
@@ -23,29 +23,28 @@ function Product() {
             <div className="main">
                 <text className="productName">PRODUCTS</text>
                 <ProductSearch />
-                {/* <div className="searchResult">
-                    <text className="searchCountText">4 results found for ‘Books’</text>
-                    <List style={{maxHeight: '100%', overflow: 'auto'}}>
-                        <SearchProduct/>
-                        <SearchProduct/>
-                    </List>
-                </div> */}
+                {/* search product view */}
+                {isSearching && <div className="searchResult">
+                    <text className="searchCountText">{products !== null ? products.length : 0} results found for ‘Books’</text>
+                    {products && products.map((pro) => <SearchProduct props={pro} />)}
+                </div>
+                }
 
                 {/* Get all Product view */}
                 <div className="productsSection">
 
-                    {isLoading && 
-                <Loader type="spinner-default" bgColor={"#0000FF"} title={"spinner-default"} color={'#FFF'} size={100} />
-            }
+                    {isLoading &&
+                        <Loader type="spinner-default" bgColor={"#0000FF"} title={"spinner-default"} color={'#FFF'} size={100} />
+                    }
                     {errorMessage && <h3>{errorMessage}</h3>}
-                    <div className="tableNameList">
+                    {!isSearching && <div className="tableNameList">
                         <text className="tableName">SKU</text>
                         <text className="tableName">IMAGE</text>
                         <text className="tableName">PRODUCT NAME</text>
                         <text className="tableName">PRICE</text>
                         <div className="endTable"></div>
-                    </div>
-                    {products && products.map((pro) => <SingleProduct props={pro} />)}
+                    </div>}
+                    {!isSearching && products && products.map((pro) => <SingleProduct props={pro} />)}
                 </div>
             </div>
         </div>
