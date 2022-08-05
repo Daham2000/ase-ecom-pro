@@ -50,3 +50,14 @@ export const editProducts = (data) => (dispatch) => {
 		})
 		.catch((error) => dispatch(actions.productEditError(error.message)));
 };
+
+//Delete products middleware function
+export const deleteProducts = (_id) => (dispatch) => {
+	dispatch(actions.productEditStartNext());
+	ProductService.deleteProduct(_id)
+		.then((response) => {
+			dispatch(actions.productDeleteSuccess(response.data))
+			dispatch(loadProducts(""));
+		})
+		.catch((error) => dispatch(actions.productDeleteError(error.message)));
+};

@@ -95,6 +95,34 @@ const productReducer = (state = productState, { type, payload }) => {
                 isLoading: false,
                 errorMessage: payload
             }
+
+        // Delete product action
+        case actions.PRODUCT_DELETE_START:
+            return{
+                ...state,
+                isLoading: false,
+                errorMessage: null
+            }
+
+        case actions.PRODUCT_DELETE_START_NEXT:
+            return{
+                ...state,
+                isLoading: true,
+                errorMessage: null
+            }
+
+        case actions.PRODUCT_DELETE_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                errorMessage: null
+            }
+        case actions.PRODUCT_DELETE_ERROR:
+            return {
+                ...state,
+                isLoading: false,
+                errorMessage: payload
+            }
         default:
             return state
     }
