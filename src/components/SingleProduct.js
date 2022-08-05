@@ -23,7 +23,7 @@ function SingleProduct(props) {
                         className="productImage" />
                 </div>
                 <h3 className="productId" id="proName">{props.props.name}</h3>
-                <h3 className="productId" id="proPrice">$24.00</h3>
+                <h3 className="productId" id="proPrice">{props.props.qty}</h3>
                 <div className="proEndTool">
                     <div>
                         <img className='toolPro' alt="" src={require("../assets/delete.png")} onClick={deleteProduct}/>

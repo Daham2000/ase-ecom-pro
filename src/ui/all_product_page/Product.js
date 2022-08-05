@@ -39,7 +39,7 @@ function Product() {
                         <h3 className="tableName">SKU</h3>
                         <h3 className="tableName">IMAGE</h3>
                         <h3 className="tableName">PRODUCT NAME</h3>
-                        <h3 className="tableName">PRICE</h3>
+                        <h3 className="tableName">Qty</h3>
                         <div className="endTable"/>
                     </div>}
                     {!isSearching && products && products.map((pro) => <SingleProduct props={pro} />)}
