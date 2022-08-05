@@ -108,6 +108,7 @@
 .searchText {
     color: white;
     font-family: "Satoshi", serif;
+    font-weight: normal;
 }
 
 .iconSearch {

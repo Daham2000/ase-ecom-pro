@@ -1,13 +1,15 @@
 import '../../theme/css/Product.css';
 import '../../theme/css/AddProduct.css';
 import ProfileBarApp from "../../components/ProfileBarApp";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { addProducts } from "../../reducers/products/productThunks"
 import { FilePicker } from "react-file-picker";
 import Loader from "react-js-loader";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Strings from "../../utill/Strings";
+import {Link} from "react-router-dom";
 
 function AddProduct() {
     const dispatch = useDispatch();
@@ -43,15 +45,17 @@ function AddProduct() {
             notify()
         }
         return () => errorMessage
-    }, [isAdded]);
+    }, [errorMessage, isAdded]);
 
     return (
         <div className="Product">
             <ProfileBarApp />
             <div className="mainSection">
                 <div className="addProRow">
-                    <text className="productName">PRODUCTS</text>
-                    <img id="imageRightAddPro" src={require("../../assets/arrow_right.png")} />
+                    <Link to={Strings.GET_PRODUCT} style={{ textDecoration: 'none' }}>
+                        <text className="productName">PRODUCTS</text>
+                    </Link>
+                    <img id="imageRightAddPro" src={require("../../assets/arrow_right.png")}  alt=""/>
                     <text className="addProductText">Add new product</text>
                 </div>
                 <div id="formSectionAddProduct">
@@ -60,10 +64,9 @@ function AddProduct() {
                             <div className="baseAddProName">
                                 <text className="inputFieldName">SKU</text>
                             </div>
-                            <input className="addProInput" type="text" disableUnderline={true}
+                            <input className="addProInput" type="text"
                                 variant="standard"
-                                onInput={e => setSku(e.target.value)}
-                                fullWidth />
+                                onInput={e => setSku(e.target.value)}/>
                         </div>
                     </div>
                     <div className="fieldInputRow">
@@ -71,34 +74,31 @@ function AddProduct() {
                             <div className="baseAddProName">
                                 <text className="inputFieldName">Name</text>
                             </div>
-                            <input className="addProInput" type="text" disableUnderline={true}
+                            <input className="addProInput" type="text"
                                 variant="standard"
-                                onInput={e => setName(e.target.value)}
-                                fullWidth />
+                                onInput={e => setName(e.target.value)}/>
                         </div>
                         <div className="inputDec">
                             <div className="baseAddProName">
                                 <text className="inputFieldName">QTY</text>
                             </div>
-                            <input className="addProInput" type="number" disableUnderline={true}
+                            <input className="addProInput" type="number"
                                 variant="standard"
-                                onInput={e => setQty(e.target.value)}
-                                fullWidth />
+                                onInput={e => setQty(e.target.value)}/>
                         </div>
                     </div>
                     <div className="descriptionSection">
                         <text className="inputFieldName">Product Description</text>
                         <text id="productDesTopic">A small description about the product</text>
-                        <input id="addProDesInput" type="text" disableUnderline={true}
-                            onInput={e => setDescription(e.target.value)}
-                            fullWidth />
+                        <input id="addProDesInput" type="text"
+                            onInput={e => setDescription(e.target.value)}/>
                     </div>
                     <div className="imagesSection">
                         <div id="imagesNameSec">
                             <text className="inputFieldName">Product Images</text>
                             <text id="productDesTopic">JPEG, PNG, SVG or GIF (Maximum file size 50MB)</text>
                         </div>
-                        {imageListPreview && imageListPreview.map((img) => <img className="imageAddProduct" src={img} />)}
+                        {imageListPreview && imageListPreview.map((img) => <img className="imageAddProduct" src={img}  alt=""/>)}
                         <FilePicker
                             extensions={['jpg', 'jpeg', 'png']}
                             dims={{ minWidth: 100, maxWidth: 500, minHeight: 100, maxHeight: 500 }}

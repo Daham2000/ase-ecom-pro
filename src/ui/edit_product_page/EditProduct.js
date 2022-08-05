@@ -1,15 +1,16 @@
 import '../../theme/css/Product.css';
 import '../../theme/css/AddProduct.css';
 import ProfileBarApp from "../../components/ProfileBarApp";
-import { List } from "@material-ui/core";
 import { useDispatch, useSelector } from 'react-redux';
 import { editProducts } from "../../reducers/products/productThunks";
 import React from "react";
 import Loader from "react-js-loader";
 import { FilePicker } from "react-file-picker";
-import { ToastContainer, toast } from 'react-toastify';
+import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState, useEffect } from "react";
+import Strings from "../../utill/Strings";
+import {Link} from "react-router-dom";
 
 function EditProduct() {
 
@@ -18,12 +19,12 @@ function EditProduct() {
     const dispatch = useDispatch();
     const { product, isLoading, isAdded, errorMessage } = useSelector(state => state.products)
 
-    const [sku, setSku] = useState(product._id);
+    const [sku, setSku] = useState(product.sku);
     const [name, setName] = useState(product.name);
     const [qty, setQty] = useState(product.qty);
     const [description, setDescription] = useState(product.description);
     const [imageList, setImageList] = useState([]);
-    const [imageListPreview, setImageListPreview] = useState([]);
+    const [imageListPreview] = useState(product.images);
 
     const [selectedFile, setSelectedFile] = useState()
 
@@ -42,15 +43,17 @@ function EditProduct() {
             notify()
         }
         return () => errorMessage
-    }, [isAdded]);
+    }, [errorMessage, isAdded]);
 
     return (
         <div className="Product">
             <ProfileBarApp />
             <div className="mainSection">
                 <div className="addProRow">
-                    <text className="productName">PRODUCTS</text>
-                    <img id="imageRightAddPro" src={require("../../assets/arrow_right.png")} />
+                    <Link to={Strings.GET_PRODUCT} style={{ textDecoration: 'none' }}>
+                        <text className="productName">PRODUCTS</text>
+                    </Link>
+                    <img id="imageRightAddPro" src={require("../../assets/arrow_right.png")}  alt=""/>
                     <text className="addProductText">Edit product</text>
                 </div>
                 <div id="formSectionAddProduct">
@@ -62,8 +65,7 @@ function EditProduct() {
                             <input className="addProInput" type="text" disableUnderline={true}
                                 variant="standard"
                                 defaultValue={product.sku}
-                                onInput={e => setSku(e.target.value)}
-                                fullWidth />
+                                onInput={e => setSku(e.target.value)}/>
                         </div>
                     </div>
                     <div className="fieldInputRow">
@@ -74,8 +76,7 @@ function EditProduct() {
                             <input className="addProInput" type="text" disableUnderline={true}
                                 variant="standard"
                                 defaultValue={product.name}
-                                onInput={e => setName(e.target.value)}
-                                fullWidth />
+                                onInput={e => setName(e.target.value)}/>
                         </div>
                         <div className="inputDec">
                             <div className="baseAddProName">
@@ -85,23 +86,21 @@ function EditProduct() {
                                 variant="standard"
                                 type="number"
                                 defaultValue={product.qty}
-                                onInput={e => setQty(e.target.value)}
-                                fullWidth />
+                                onInput={e => setQty(e.target.value)}/>
                         </div>
                     </div>
                     <div className="descriptionSection">
                         <text className="inputFieldName">Product Description</text>
                         <text id="productDesTopic">A small description about the product</text>
                         <input id="addProDesInput" defaultValue={product.description} type="text" disableUnderline={true}
-                            onInput={e => setDescription(e.target.value)}
-                            fullWidth />
+                            onInput={e => setDescription(e.target.value)}/>
                     </div>
                     <div className="imagesSection">
                         <div id="imagesNameSec">
                             <text className="inputFieldName">Product Images</text>
                             <text id="productDesTopic">JPEG, PNG, SVG or GIF (Maximum file size 50MB)</text>
                         </div>
-                        {imageListPreview && imageListPreview.map((img) => <img className="imageAddProduct" src={img} />)}
+                        {imageListPreview && imageListPreview.map((img) => <img className="imageAddProduct" src={img}  alt=""/>)}
                         <FilePicker
                             extensions={['jpg', 'jpeg', 'png']}
                             dims={{ minWidth: 100, maxWidth: 500, minHeight: 100, maxHeight: 500 }}

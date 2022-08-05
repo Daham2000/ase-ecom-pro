@@ -5,7 +5,7 @@ import '../theme/css/Product.css';
 function ProfileBarApp(){
     return (
         <div className="nav">
-            <text className="profileName">ADMIN</text>
+            <h2 className="profileName">ADMIN</h2>
             <SvgIcon className="iconDown" component={ImportedSVG}></SvgIcon>
             <div className="profilePicture"/>
         </div>

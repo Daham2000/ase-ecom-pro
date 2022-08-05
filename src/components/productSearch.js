@@ -18,21 +18,16 @@ function ProductSearch() {
                 <input value={searchQuery} className="textFieldSearch" type="text" disableUnderline={true}
                     variant="standard"
                     onInput={e => setQuery(e.target.value)}
-                    placeholder="Search for products"
-                    fullWidth />
+                    placeholder="Search for products"/>
                 <div className="button" onClick={searchAction} aria-hidden="true">
                     <img alt="" src={require('../assets/search.png')} className="iconSearch" />
-                    <text className="searchText">Search</text>
+                    <h5 className="searchText">Search</h5>
                 </div>
             </div>
             <div className="productRowRight">
                 <Link to={Strings.ADD_PRODUCT}>
                     <button className="newProduct">New Product</button>
                 </Link>
-
-                <div className="favouriteBtn" style={{ border: '1px solid #001EB9' }}>
-                    <img alt="" src={require('../assets/fav.png')} className="iconSearch" />
-                </div>
             </div>
         </div>
     );
