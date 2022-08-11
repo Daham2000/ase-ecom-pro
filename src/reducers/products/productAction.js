@@ -64,6 +64,26 @@ const productEditError = (error) => ({
     payload: error
 });
 
+//delete product actions
+const productDeleteStart = (product) => ({
+    type: actionType.PRODUCT_EDIT_START,
+    payload: product
+});
+
+const productDeleteStartNext = () => ({
+    type: actionType.PRODUCT_DELETE_START_NEXT
+});
+
+const productDeleteSuccess = (products) => ({
+    type: actionType.PRODUCT_DELETE_SUCCESS,
+    payload: products
+});
+
+const productDeleteError = (error) => ({
+    type: actionType.PRODUCT_DELETE_ERROR,
+    payload: error
+});
+
 export default {
     appProduct,
     addProductSuccess,
@@ -77,5 +97,9 @@ export default {
     productEditError,
     productEditSuccess,
     productEditStartNext,
-    productEditStart
+    productEditStart,
+    productDeleteError,
+    productDeleteSuccess,
+    productDeleteStartNext,
+    productDeleteStart
 }

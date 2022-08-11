@@ -1,5 +1,4 @@
 import '../../theme/css/Product.css';
-import ProfileBarApp from "../../components/ProfileBarApp";
 import ProductSearch from "../../components/productSearch";
 import SearchProduct from "../../components/SearchProduct";
 import SingleProduct from "../../components/SingleProduct";
@@ -15,17 +14,16 @@ function Product() {
 
     useEffect(() => {
         dispatch(loadProducts(""));
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className="Product">
-            <ProfileBarApp />
             <div className="main">
-                <text className="productName">PRODUCTS</text>
+                <h3 className="productName">PRODUCTS</h3>
                 <ProductSearch />
                 {/* search product view */}
                 {isSearching && <div className="searchResult">
-                    <text className="searchCountText">{products !== null ? products.length : 0} results found for ‘Books’</text>
+                    <h3 className="searchCountText">{products !== null ? products.length : 0} results found</h3>
                     {products && products.map((pro) => <SearchProduct props={pro} />)}
                 </div>
                 }
@@ -38,11 +36,11 @@ function Product() {
                     }
                     {errorMessage && <h3>{errorMessage}</h3>}
                     {!isSearching && <div className="tableNameList">
-                        <text className="tableName">SKU</text>
-                        <text className="tableName">IMAGE</text>
-                        <text className="tableName">PRODUCT NAME</text>
-                        <text className="tableName">PRICE</text>
-                        <div className="endTable"></div>
+                        <h3 className="tableName">SKU</h3>
+                        <h3 className="tableName">IMAGE</h3>
+                        <h3 className="tableName">PRODUCT NAME</h3>
+                        <h3 className="tableName">Qty</h3>
+                        <div className="endTable"/>
                     </div>}
                     {!isSearching && products && products.map((pro) => <SingleProduct props={pro} />)}
                 </div>
